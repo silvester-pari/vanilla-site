@@ -1,0 +1,15 @@
+{
+  "name": "vanilla-site",
+  "version": "0.1.0",
+  "description": "A single page application (SPA) built with Vanilla JS",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/silvester-pari/vanilla-site"
+  },
+  "author": "silvester-pari",
+  "license": "MIT"
+}

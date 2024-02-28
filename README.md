@@ -1,6 +1,10 @@
 # vanilla-site
 
-An experimental SPA built with Vanilla JS
+An experimental SPA built with Vanilla JS!
+
+## Demo
+
+https://silvester-pari.github.io/vanilla-site/
 
 ## Experiment goals
 

@@ -22,7 +22,7 @@ export const createRouter = (config) => {
       history.pushState(
         "",
         "",
-        (config.base || "/") + e.target.href.replace(/^\//)
+        (config.base || "/") + e.target.pathname.replace(/^\//, "")
       );
       router();
     }

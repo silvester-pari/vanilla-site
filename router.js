@@ -2,7 +2,10 @@ import { renderTemplate } from "./render.js";
 
 export const createRouter = (config) => {
   const router = async () => {
-    const currentView = config.routes[location.pathname];
+    const currentView =
+      config.routes[
+        location.pathname.replace(config.base.replace(/\/$/, ""), "")
+      ];
 
     if (currentView) {
       document.title = currentView.name;
@@ -19,7 +22,7 @@ export const createRouter = (config) => {
       history.pushState(
         "",
         "",
-        config.base || "/" + e.target.href.replace(/^\//)
+        (config.base || "/") + e.target.href.replace(/^\//)
       );
       router();
     }

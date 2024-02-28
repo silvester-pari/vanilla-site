@@ -8,7 +8,7 @@ export const createRouter = (config) => {
       document.title = currentView.name;
       await renderTemplate(currentView.src, "main");
     } else {
-      history.replaceState("", "", "/");
+      history.replaceState("", "", config.base || "/");
       router();
     }
   };
@@ -16,7 +16,11 @@ export const createRouter = (config) => {
   window.addEventListener("click", (e) => {
     if (e.target.matches("a")) {
       e.preventDefault();
-      history.pushState("", "", e.target.href);
+      history.pushState(
+        "",
+        "",
+        config.base || "/" + e.target.href.replace(/^\//)
+      );
       router();
     }
   });
